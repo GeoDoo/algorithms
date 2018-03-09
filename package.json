@@ -1,0 +1,23 @@
+{
+  "name": "algorithms",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GeoDoo/algorithms.git"
+  },
+  "keywords": [],
+  "author": "George Karametas <geometas@hotmail.com> (http://geodoo.work/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GeoDoo/algorithms/issues"
+  },
+  "homepage": "https://github.com/GeoDoo/algorithms#readme",
+  "dependencies": {
+    "jest": "^22.4.2"
+  }
+}
