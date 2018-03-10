@@ -1,33 +1,26 @@
 const spiral = require('../src/problem1')
 
 describe('Problem 1', () => {
-	let matrix, generator
+	const	matrix = [[1,  2,  3,  4,  5],
+								 [6,  7,  8,  9,  10],
+								 [11, 12, 13, 14, 15],
+								 [16, 17, 18, 19, 20]]
 
-	beforeEach(() => {
-		matrix = [[1,  2,  3,  4,  5],
-						 [6,  7,  8,  9,  10],
-						 [11, 12, 13, 14, 15],
-						 [16, 17, 18, 19, 20]]
-		
-		generator = spiral(matrix)
+	const spy = jest.spyOn(global.console, 'log')
+
+	afterEach(() => {
+	 	spy.mockReset()
+    spy.mockRestore()
 	})
 
-	test('should yield the values of the first row', () => {
-		expect(generator.next().value).toBe(1)
-		expect(generator.next().value).toBe(2)
-		expect(generator.next().value).toBe(3)
-		expect(generator.next().value).toBe(4)
-		expect(generator.next().value).toBe(5)
+	test('should print the values of the first row first', () => {
+		const expectedNumOfCalls = matrix[0].length
+		spiral(matrix)
+
+		expect(spy).toHaveBeenCalledTimes(expectedNumOfCalls)
 	})
 
-	test('should print the last element of the second row', () => {
-		const expected = 10
-		generator.next()
-		generator.next()
-		generator.next()
-		generator.next()
-		generator.next()
+	test.skip('should print the last column from top to bottom next', () => {
 
-		expect(generator.next().value).toBe(expected)	
 	})
 })

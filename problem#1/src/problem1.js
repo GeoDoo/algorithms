@@ -1,12 +1,12 @@
-function* spiral (matrix) {
+const spiral = (matrix) => {
 
 	const firstRow = matrix[0]
 
 	for (let i = 0; i < firstRow.length; i++) {
-		yield firstRow[i]
+		console.log(firstRow[i])
 	}
 
-	yield matrix[1][4]
+	// console.log(matrix[1][4])
 }
 
 module.exports = spiral
